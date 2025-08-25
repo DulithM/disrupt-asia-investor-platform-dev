@@ -80,14 +80,7 @@ export function MobileNav({ currentPage = "dashboard", onClose }: MobileNavProps
                 ))}
               </div>
               
-              <div className="mt-6 pt-4 border-t border-gray-200">
-                <Button 
-                  className="w-full bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white"
-                  onClick={handleClose}
-                >
-                  Schedule Meeting
-                </Button>
-              </div>
+
             </nav>
           </div>
         </div>

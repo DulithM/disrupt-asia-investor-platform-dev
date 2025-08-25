@@ -17,8 +17,8 @@ export function StatsCards() {
     },
     {
       icon: CalendarIcon,
-      value: "500+",
-      label: "Scheduled Meetings",
+      value: "50+",
+      label: "Sessions",
       color: "text-teal-500",
     },
     {

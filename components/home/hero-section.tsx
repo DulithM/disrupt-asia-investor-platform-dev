@@ -18,7 +18,7 @@ export function HeroSection() {
         </span>
       </h1>
       <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 sm:mb-8 max-w-3xl mx-auto px-4 sm:px-0 leading-relaxed">
-        Connect with groundbreaking startups, schedule meetings, and discover the next big opportunities in Asia's
+        Connect with groundbreaking startups and discover the next big opportunities in Asia's
         thriving innovation ecosystem.
       </p>
       <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4 sm:px-0">

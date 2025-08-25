@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
-import { X, MapPin, Users, CalendarIcon, ExternalLink, Mail, Award, Building2, Briefcase, Phone } from "lucide-react"
+import { X, MapPin, Users, ExternalLink, Mail, Award, Building2, Briefcase, Phone } from "lucide-react"
 import Image from "next/image"
 
 interface StartupDetailsPanelProps {
@@ -128,10 +128,6 @@ export function StartupDetailsPanel({ startup, onClose }: StartupDetailsPanelPro
             <Button className="flex-1 bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white text-xs sm:text-sm py-2 sm:py-2.5">
               <Mail className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
               Contact
-            </Button>
-            <Button variant="outline" className="flex-1 text-xs sm:text-sm py-2 sm:py-2.5">
-              <Award className="h-3 w-3 sm:h-4 sm:w-4 mr-1.5 sm:mr-2" />
-              Schedule
             </Button>
           </div>
         </CardContent>

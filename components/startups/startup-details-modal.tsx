@@ -25,12 +25,10 @@ import {
   Bookmark,
   Briefcase,
   Phone,
-  CalendarIcon,
   FileText
 } from "lucide-react"
 import { useFavorites } from "@/hooks/use-favorites"
 import { useToast } from "@/hooks/use-toast"
-import { useRouter } from "next/navigation"
 import { PDFViewerModal } from "./pdf-viewer-modal"
 
 interface Startup {
@@ -56,7 +54,6 @@ interface StartupDetailsModalProps {
 export function StartupDetailsModal({ startup, isOpen, onClose }: StartupDetailsModalProps) {
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites()
   const { toast } = useToast()
-  const router = useRouter()
   const [isAnimating, setIsAnimating] = useState(false)
   const [isPdfViewerOpen, setIsPdfViewerOpen] = useState(false)
 
@@ -106,10 +103,7 @@ export function StartupDetailsModal({ startup, isOpen, onClose }: StartupDetails
     window.open(startup.websiteUrl, '_blank')
   }
 
-  const handleScheduleWithStartup = () => {
-    router.push(`/schedule-meeting/${startup.id}`)
-    onClose()
-  }
+
 
   return (
     <Dialog open={isOpen} onOpenChange={isPdfViewerOpen ? undefined : onClose}>
@@ -330,25 +324,14 @@ export function StartupDetailsModal({ startup, isOpen, onClose }: StartupDetails
                   Contact Email
                 </Button>
                 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button
-                    variant="outline"
-                    onClick={handleWebsite}
-                    className="border-cyan-300 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-400 flex-1"
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    Visit Website
-                  </Button>
-                  
-                  <Button
-                    variant="outline"
-                    onClick={handleScheduleWithStartup}
-                    className="border-cyan-300 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-400 flex-1"
-                  >
-                    <CalendarIcon className="h-4 w-4 mr-2" />
-                    Schedule Meeting
-                  </Button>
-                </div>
+                <Button
+                  variant="outline"
+                  onClick={handleWebsite}
+                  className="border-cyan-300 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-400 w-full sm:w-auto"
+                >
+                  <ExternalLink className="h-4 w-4 mr-2" />
+                  Visit Website
+                </Button>
               </div>
             </CardContent>
           </Card>

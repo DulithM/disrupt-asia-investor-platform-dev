@@ -495,6 +495,21 @@ export const startups: Startup[] = [
     pitchDeckPdf: "/pitchdeck/eZuite_v11 - Lashan Silva.pdf",
     briefDescription: "eZuite is a modern, AI-powered Cloud ERP built to simplify business operations and scale with confidence. Designed for manufacturers, distributors, retailers, and service providers, it unifies Finance, Sales, Procurement, Inventory, and Services into one seamless platform. Unlike traditional ERPs, eZuite delivers simplified workflows, easy integrations, and automation that reduce complexity and cut costs. With real-time insights and digital sustainability features, it empowers smarter decisions and greater efficiency. Delivered as a secure, multi-tenant SaaS, eZuite combines enterprise-grade power with SME-friendly simplicity—making digital transformation fast, affordable, and future-ready.",
   },
+  {
+    id: 33,
+    startupName: "MAGICBIT",
+    isTop30: false,
+    isLocal: true,
+    fullName: "Migara Amithodhana",
+    designation: "Co-Founder",
+    contactNumber: "+94712617797",
+    emailAddress: "migara@magicbit.cc",
+    startupLogo: "/startup-logos/logo__ - Migara Amithodhana.jpg",
+    startupDomain: "Edtech",
+    websiteUrl: "https://magicbit.cc/",
+    pitchDeckPdf: "/pitchdeck/Disrupt Asia 2025-MAGICBIT - Migara Amithodana.pdf",
+    briefDescription: "Magicbit is a company developing innovative STEM education tools to promote innovation with technology for students age 8 years above for students. Magicbit has a user community over 10,000 across 40 countries and trusted by many institutions.",
+  },
 ];
 
 

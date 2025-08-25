@@ -28,12 +28,7 @@ export function QuickActions() {
             Interactive Map
           </Button>
         </Link>
-        <Link href="/schedule-meeting">
-          <Button variant="outline" className="w-full bg-transparent text-sm sm:text-base py-2 sm:py-3">
-            <Users className="h-4 w-4 mr-2" />
-            Schedule Meeting
-          </Button>
-        </Link>
+
       </CardContent>
     </Card>
   )

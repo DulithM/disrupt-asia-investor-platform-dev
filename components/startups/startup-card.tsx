@@ -4,11 +4,10 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { DomainBadge } from "@/components/ui/domain-badge"
 
-import { Star, Heart, MapPin, CalendarIcon, Trash2, Check, Users, Globe, Mail, ExternalLink, Eye, ArrowRight, Bookmark, Briefcase, Phone } from "lucide-react"
+import { Trash2, Check, Users, Mail, Eye, Bookmark, Briefcase, Phone } from "lucide-react"
 import { useFavorites } from "@/hooks/use-favorites"
 import { useToast } from "@/hooks/use-toast"
-import { useState, useEffect } from "react"
-import { useRouter } from "next/navigation"
+import { useState } from "react"
 import { StartupDetailsModal } from "./startup-details-modal"
 import { Square } from 'ldrs/react'
 import 'ldrs/react/Square.css'
@@ -43,7 +42,6 @@ export function StartupCard({
 }: StartupCardProps) {
   const { addToFavorites, removeFromFavorites, isFavorite } = useFavorites()
   const { toast } = useToast()
-  const router = useRouter()
   const [isAnimating, setIsAnimating] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -106,13 +104,8 @@ export function StartupCard({
     }, 300)
   }
 
-  const handleDirectCalendlySchedule = () => {
-    // Since we don't have calendly links in the new structure, we'll contact via email
+  const handleContactStartup = () => {
     window.open(`mailto:${startup.emailAddress}`, "_blank")
-  }
-
-  const handleScheduleWithStartup = () => {
-    router.push(`/schedule-meeting/${startup.id}`)
   }
 
 
@@ -166,15 +159,15 @@ export function StartupCard({
           
           {/* Mobile: Vertical buttons, Desktop: Horizontal buttons */}
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:space-x-2 w-full sm:w-auto">
-            <Button
-              size="sm"
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white shadow-md text-xs py-2.5 sm:py-2 h-auto sm:h-8 flex items-center justify-center"
-              onClick={handleScheduleWithStartup}
-            >
-              <ArrowRight className="h-3 w-3 mr-1" />
-              <span className="hidden sm:inline">Contact</span>
-              <span className="sm:hidden">Contact</span>
-            </Button>
+                         <Button
+               size="sm"
+               className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white shadow-md text-xs py-2.5 sm:py-2 h-auto sm:h-8 flex items-center justify-center"
+               onClick={handleContactStartup}
+             >
+               <Mail className="h-3 w-3 mr-1" />
+               <span className="hidden sm:inline">Contact</span>
+               <span className="sm:hidden">Contact</span>
+             </Button>
             {showFavoriteButton && (
               <Button
                 size="sm"
@@ -273,15 +266,15 @@ export function StartupCard({
             {/* Mobile: Vertical buttons, Desktop: Horizontal buttons */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 sm:gap-3">
               {/* Primary Action Button */}
-              <Button
-                size="sm"
-                className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white shadow-md text-xs sm:text-sm py-3 sm:py-2.5 h-auto sm:h-9 flex items-center justify-center"
-                onClick={handleScheduleWithStartup}
-              >
-                <ArrowRight className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
-                <span className="hidden sm:inline">Contact Startup</span>
-                <span className="sm:hidden">Contact</span>
-              </Button>
+                             <Button
+                 size="sm"
+                 className="bg-gradient-to-r from-cyan-500 to-teal-500 hover:from-cyan-600 hover:to-teal-600 text-white shadow-md text-xs sm:text-sm py-3 sm:py-2.5 h-auto sm:h-9 flex items-center justify-center"
+                 onClick={handleContactStartup}
+               >
+                 <Mail className="h-3 w-3 sm:h-4 sm:w-4 mr-1" />
+                 <span className="hidden sm:inline">Contact Startup</span>
+                 <span className="sm:hidden">Contact</span>
+               </Button>
 
               {/* Secondary Action Button */}
               <Button 
