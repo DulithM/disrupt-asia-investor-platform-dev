@@ -315,10 +315,10 @@ export function StartupDetailsModal({ startup, isOpen, onClose }: StartupDetails
                 <h3 className="text-base sm:text-lg font-semibold text-gray-900">Get in Touch</h3>
               </div>
               
-              <div className="flex flex-col gap-3">
+              <div className="flex gap-3">
                 <Button
                   onClick={handleContact}
-                  className="bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white shadow-sm w-full sm:w-auto"
+                  className="bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-700 hover:to-teal-700 text-white shadow-sm w-1/2"
                 >
                   <Mail className="h-4 w-4 mr-2" />
                   Contact Email
@@ -327,7 +327,7 @@ export function StartupDetailsModal({ startup, isOpen, onClose }: StartupDetails
                 <Button
                   variant="outline"
                   onClick={handleWebsite}
-                  className="border-cyan-300 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-400 w-full sm:w-auto"
+                  className="border-cyan-300 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-400 w-1/2"
                 >
                   <ExternalLink className="h-4 w-4 mr-2" />
                   Visit Website
