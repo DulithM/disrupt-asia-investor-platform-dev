@@ -329,23 +329,6 @@ export function StartupCard({
                 </Button>
               )}
             </div>
-
-            {/* Mobile: Quick Actions Row */}
-            <div className="sm:hidden mt-3 pt-3 border-t border-gray-100">
-              <div className="flex items-center justify-between text-xs text-gray-500">
-                <div className="flex items-center space-x-2">
-                  <span className="flex items-center space-x-1">
-                    <Users className="h-3 w-3" />
-                    <span>{startup.fullName}</span>
-                  </span>
-                  <span>•</span>
-                  <span>{startup.designation}</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <span className="text-green-600 font-medium">Active</span>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
